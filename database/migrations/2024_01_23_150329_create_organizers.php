@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
+        //
         Schema::create('organizers', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre')->notNullable();
-            $table->string('contacto')->notNullable();
+            $table->String('nombre');
+            $table->String('contacto');
             $table->timestamps();
         });
     }
@@ -24,6 +25,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        //
         Schema::dropIfExists('organizers');
     }
 };

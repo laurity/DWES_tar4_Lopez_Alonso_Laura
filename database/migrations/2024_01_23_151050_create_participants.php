@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('participants', function (Blueprint $table) {
             $table->id();
             $table->string('nombre')->notNullable();
-            $table->string('email')->notNullable();
+            $table->string('email')->notNullable()->unique();
             $table->timestamps();
         });
     }

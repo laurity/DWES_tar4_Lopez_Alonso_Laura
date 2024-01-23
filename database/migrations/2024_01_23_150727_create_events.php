@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('organizer_id');
-            $table->foreign('organizer_id')->references('id')->on('users');
-            $table->string('nombre_evento')->notNullable();
-            $table->date('fecha')->notNullable();
-            $table->string('ubicacion')->notNullable();
+            $table->foreign('organizer_id')->references('id')->on('organizers');
+            $table->string('nombre_evento');
+            $table->date('fecha');
+            $table->string('ubicacion');
             $table->timestamps();
         });
     }
