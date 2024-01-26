@@ -21,12 +21,7 @@ use App\Http\Controllers\UserDetailController;
 
 Route::apiResource('event', EventController::class);
 Route::apiResource('organizer', OrganizerController::class);
-Route::apiResource('participan', ParticipantController::class);
+Route::apiResource('participant', ParticipantController::class);
 Route::apiResource('user', UserController::class);
 Route::apiResource('userdetail', UserDetailController::class);
-
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 

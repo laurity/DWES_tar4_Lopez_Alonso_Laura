@@ -31,7 +31,7 @@ class EventController extends Controller
             $event->ubicacion = $request->input('ubicacion');
             $event->save();
  
-            return response()->json($event, 202);
+            return response()->json($event, 200);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Error'], 500);
         }

@@ -45,7 +45,6 @@ class OrganizerController extends Controller
  
     public function update(Request $request, $id)
         {
-            // Validar los datos del usuario
             $request->validate([
                 'nombre' => 'required|string',
                 'contacto' => 'required|string',
@@ -57,7 +56,6 @@ class OrganizerController extends Controller
                 return response()->json(['message' => 'Usuario no encontrado'], 404);
             }
    
-            // $organizador->update($request->all());
             $organizador->nombre = $request->input('nombre');
             $organizador->contacto = $request->input('contacto');
             $organizador->save();
